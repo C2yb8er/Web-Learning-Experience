@@ -9,3 +9,28 @@
 3. Pikachu靶场是我用来完善DVMA靶场而搭建的。目的就是巩固在DVMA入门的相关知识。首先想到这个靶场是因为我之前看到有过这个靶场有验证码绕过的相应题目，碰巧我之前也在挖短信轰炸相应的漏洞往往需要后验证码验证，所以当做完DVMA靶场的爆破相应的题目的时候我就安装了本靶场，并成功地使用Burp以及安装了相应的验证码识别插件能够在有验证码的条件下进行爆破攻击，也具有很大的实战意义。除了爆破，我还做了XSS、RCE和CSRF。题目大抵相同但是本靶场有些知识更广。
 4. 做了一点点CTFShow上面的PHP特性的题目，因为本周开始学校的实训课程，大体也是讲的Web方面的知识。利用win7上面搭建了phpEnv环境然后物理机访问，这样我就可以进行PHP相关的开发以及安全实验。之前比较疑惑PHP貌似没有什么IDE像Python那样运行，之前都是去网上的在线网站运行的，如今有了这种方法感觉还不错，而且对相关网站的层次结构更清晰了一点。我目前做了大概6-7道PHP特性的题目，大抵就是数组绕过，进制转换相关的利用。
 5. 本周学的还是挺多的，还不错。下周希望能完结这三个lab（flag立的有点大2333🤡）然后在实训遇到相关知识点的时候可以多往靶场去刷刷。想学SSTI、node.js、反序列化。还有JAVA入门。啥都想学，要学的也很多，不急！慢中有快，快中有慢！✌🏼
+6. 在补天上交了一个短信轰炸的漏洞被拒了，虽然被拒了但是提升了我相应的能力还是挺开心的~
+![c2yb8er-image](https://cdn.staticaly.com/gh/C2yb8er/picx-images-hosting@master/20230717/c2yb8er-image.14x1dffbb6m8.png)
+## 第二周
+
+> 首先得在这里承认自己的错误，第二周的周总结放在了第三周的第一天来写......不要拖延！！！😫
+
+1. 由于实训的缘故，在刷`DVWA`、`Pikachu`靶场的时候，我接触到了`crAPI`靶场，这个靶场比较接近实战，主要测试漏洞方向是API安全。通过`crAPI`靶场学习我对API安全有了更深的认识，之前觉得比较抽象。同时也对`HTTP`中的`GET\POST\PUT\DELETE\OPTIONS`等协议有了更深刻的理解，也就是在Burpsuite里面抓包拦截切换协议放包来进行一些意想不到的操作。同时在分析lab有些题目的时候，我学习了`NoSQL`注入的方式：`{"coupon_code": {"$ne": "hacked by c2yb8er"}}`，对`Mongodb`这些非关系型数据库有了基本的认识。同时，精进了我对`Burp Suite`的操作。十几个lab做下来可谓是burpsuite抓包放包这些操作操练得非常熟练了，但是BS的强大功能之处还得我进一步地去探索挖掘。在这个靶场之中还比较好的经验就是支付接口漏洞以及优惠卷相关的接口漏洞，我感觉都是非常贴近于实战渗透的。以后抓到的数据包呈现如果是Json的形式的话，就多往API漏洞上面去测测吧~，美中不足的就是我学了一下`JWT`还是没有打通这个lab的`JWT`中`JKU Misuse Vulnerability`的关卡，也算初步接触了一下`JWT`，我看`CTFSHOW`靶场上面也有`JWT`相关的题目，后面还可以去练习练习。到时候再回来看能不能在这个靶场的题目中有所突破😋
+
+   [点击此处可以查看具体靶场通关记录。](https://c2yb8er.cn/2023/07/10/crAPI%E9%9D%B6%E5%9C%BA%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/)
+
+2. `DVWA`靶场呢这周没咋做QwQ，实训布置了其他任务比如说`Upload-labs`靶场，通过做这个靶场我将其中学到的绕过二次渲染文件上传+文件包含漏洞，成功打通了`DVWA`靶场的文件上传的Impossible难度还是挺开心的！o(*￣▽￣*)ブ
+
+3. `Pikachu`靶场也没咋做这周，做了点`XSS`的内容：`xss之htmlspecialchars`、`xss之href输出`
+
+4. `CTFShow`靶场：
+
+   - 对着WP快速把第一部分信息收集做完了，整理如下：
+   ![c2yb8er-CTFShow-信息搜集](https://cdn.staticaly.com/gh/C2yb8er/picx-images-hosting@master/20230717/c2yb8er-CTFShow-信息搜集.5rlc3ko7l4s0.png)
+   - 入门了反序列化漏洞，首先是装了`phpstrom`这个合适的`IDE`能够在本地进行动态调试，初步就会了`如何利用反序列化漏洞`、`绕过正则过滤：➕绕过`以及一些魔法函数的使用
+   - 虽然只做了一道`nodejs`的题目，但是还是想写写，感觉自己的JS代码功底就是依托答辩/(ㄒoㄒ)/~~
+
+5. `Upload-labs`靶场，差不多一天的时间对着WP做完了，学到了很多，对文件上传漏洞的利用更加熟练了，思维导图整理如下：
+![c2yb8erUpload-labs总结](https://cdn.staticaly.com/gh/C2yb8er/picx-images-hosting@master/20230716/c2yb8erUpload-labs总结.3cojkvvb3860.png)
+6. 挖了两个公益SRC🕳，交到漏洞盒子上面了还在待审核。自评高危23333。u1s1,漏洞盒子审核确实有点慢。
+   ![c2yb8er-image](https://cdn.staticaly.com/gh/C2yb8er/picx-images-hosting@master/20230717/c2yb8er-image.npp6mc53awg.png)
